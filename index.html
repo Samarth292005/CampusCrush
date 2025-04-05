@@ -9,12 +9,25 @@
 <body>
     <div class="container">
         <div class="login-box">
-            <h2>BMU College Login</h2>
-            <p>Please login using your BMU College ID</p>
-            <form id="loginForm" onsubmit="return validateEmail()">
-                <input type="email" id="email" placeholder="Enter your BMU College ID" required>
-                <button type="submit">Login</button>
-            </form>
+            <h1>BMU Connect</h1>
+            <p class="tagline">Access college resources and connect with peers</p>
+            
+            <!-- Email Step -->
+            <div id="email-step">
+                <form id="emailForm" onsubmit="sendOTP(); return false;">
+                    <input type="email" id="email" placeholder="Enter your BMU College Email" required>
+                    <button type="submit">Send OTP</button>
+                </form>
+            </div>
+
+            <!-- OTP Step -->
+            <div id="otp-step" style="display: none;">
+                <p class="tagline">Enter the OTP sent to your email</p>
+                <input type="text" id="otp" placeholder="Enter OTP" required>
+                <button onclick="validateOTP()">Submit OTP</button>
+            </div>
+
+            <p class="footer-text">Your gateway to academic excellence and peer interactions!</p>
         </div>
     </div>
 
