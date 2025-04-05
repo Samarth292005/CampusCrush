@@ -11,8 +11,10 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100%;
-    background:'Screenshot 2025-04-05 150821.png'; /* Change this to your background image */
+    background: url('images/Screenshot 2025-04-05 150821.png') no-repeat center center fixed;
     background-size: cover;
+}
+
 }
 
 .login-box {
