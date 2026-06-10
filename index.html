@@ -1,36 +1,117 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMU College Login</title>
+    <title>BMU Connect Login</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="login-box">
-            <h1>BMU Connect</h1>
-            <p class="tagline">Access college resources and connect with peers</p>
-            
-            <!-- Email Step -->
-            <div id="email-step">
-                <form id="emailForm" onsubmit="sendOTP(); return false;">
-                    <input type="email" id="email" placeholder="Enter your BMU College Email" required>
-                    <button type="submit">Send OTP</button>
-                </form>
-            </div>
 
-            <!-- OTP Step -->
-            <div id="otp-step" style="display: none;">
-                <p class="tagline">Enter the OTP sent to your email</p>
-                <input type="text" id="otp" placeholder="Enter OTP" required>
-                <button onclick="validateOTP()">Submit OTP</button>
-            </div>
+```
+<div class="container">
 
-            <p class="footer-text">Your gateway to academic excellence and peer interactions!</p>
+    <div class="login-box">
+
+        <h1>BMU Connect</h1>
+
+        <p class="tagline">
+            Access college resources and connect with peers
+        </p>
+
+        <!-- Login Form -->
+        <div id="email-step">
+
+            <form id="emailForm" onsubmit="sendOTP(); return false;">
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter Your Full Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter Your BMU Email"
+                    required
+                >
+
+                <label class="remember-me">
+                    <input type="checkbox" id="rememberMe">
+                    Remember Me
+                </label>
+
+                <button type="submit">
+                    Send OTP
+                </button>
+
+            </form>
+
         </div>
+
+        <!-- OTP Verification -->
+        <div id="otp-step" style="display:none;">
+
+            <h3>Email Verification</h3>
+
+            <p class="tagline">
+                Enter the OTP sent to your BMU email
+            </p>
+
+            <input
+                type="text"
+                id="otp"
+                placeholder="Enter 6-digit OTP"
+                maxlength="6"
+                required
+            >
+
+            <button onclick="validateOTP()">
+                Verify OTP
+            </button>
+
+            <br><br>
+
+            <button
+                type="button"
+                onclick="resendOTP()"
+                class="secondary-btn">
+                Resend OTP
+            </button>
+
+        </div>
+
+        <!-- Quick Features -->
+        <div class="features">
+
+            <div class="feature">
+                📚 Course Resources
+            </div>
+
+            <div class="feature">
+                👥 Student Community
+            </div>
+
+            <div class="feature">
+                📅 Campus Events
+            </div>
+
+        </div>
+
+        <p class="footer-text">
+            Your gateway to academic excellence and peer interactions.
+        </p>
+
     </div>
 
-    <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
+```
+
 </body>
 </html>
+
